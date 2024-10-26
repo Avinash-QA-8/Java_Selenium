@@ -1,0 +1,20 @@
+package org.adacitin.project;
+
+import org.openqa.selenium.WebDriver;
+
+import com.adacitin.project.Base_Class;
+
+public class Runner_Class extends Base_Class {
+	
+	public static WebDriver driver;
+	
+	public static void main(String[] args) {
+		
+	  driver = browser_Launch("chrome");
+	  
+       new_Line();
+	  
+	  System.out.println(" Automation Program Executed successfully !!! ");
+	}
+
+}

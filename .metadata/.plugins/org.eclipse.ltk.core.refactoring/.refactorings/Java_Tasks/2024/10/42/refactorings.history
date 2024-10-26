@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;com.onstructor_task&apos; to &apos;com.constructor_task&apos;&#x0A;- Original project: &apos;Java_Tasks&apos;&#x0A;- Original element: &apos;Java_Tasks/src/com.onstructor_task&apos;&#x0A;- Renamed element: &apos;Java_Tasks/src/com.constructor_task&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings&#x0A;- Rename subpackages of the package" description="Rename package &apos;com.onstructor_task&apos;" flags="589830" hierarchical="true" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;com.onstructor_task" name="com.constructor_task" qualified="false" references="true" stamp="1729251215972" textual="false" version="1.0"/>
+</session>

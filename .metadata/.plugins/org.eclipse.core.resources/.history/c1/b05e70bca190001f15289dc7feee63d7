@@ -1,0 +1,41 @@
+package org.adacitin.project;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import com.adacitin.project.Base_Class;
+
+public class Sample_Runner_Class extends Base_Class {
+	
+	public static WebDriver driver;
+	
+	public static void main(String[] args) throws InterruptedException {
+		
+	  driver = browser_Launch("chrome");
+	  
+	  maximize_Window();
+	  
+	  hold_On();
+	  
+	  url_Launch("https://adactinhotelapp.com/index.php");
+	  
+	  hold_On();
+	  
+	  WebElement user_name = driver.findElement(By.xpath("//input[@id='username']"));
+	  input(user_name,"stailn08");
+	  
+	  WebElement password = driver.findElement(By.xpath("//input[@id='password']"));
+	  input(password,"EEYJ97");
+	  
+	  WebElement login = driver.findElement(By.xpath("//input[@id='login']"));
+	  click_Button(login);
+	  
+	  
+	  
+	  quit();
+	  
+	  success_Message();
+	}
+
+}

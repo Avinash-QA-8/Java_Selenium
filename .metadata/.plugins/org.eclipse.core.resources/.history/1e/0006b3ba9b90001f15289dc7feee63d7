@@ -1,0 +1,51 @@
+package com.adacitin.project;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.safari.SafariDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class Base_Class {
+	
+	
+	public static void browser(String browser)
+	
+	{
+		
+		if(browser.equalsIgnoreCase("chrome"))
+			
+		{
+		
+		WebDriverManager.chromedriver().setup();
+		
+		WebDriver driver = new ChromeDriver();
+		
+		}
+		
+		else if (browser.equalsIgnoreCase("msedge"))
+		
+		{
+		
+		WebDriverManager.edgedriver().setup();
+		
+		WebDriver edge_Driver = new EdgeDriver();
+		
+		}
+		
+		else if(browser.equalsIgnoreCase("safari"))
+			
+		{
+		
+		WebDriverManager.safaridriver().setup();
+		
+		WebDriver safari_Driver = new SafariDriver();
+		
+		}
+	}
+	
+	
+
+
+}

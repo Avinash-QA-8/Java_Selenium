@@ -1,0 +1,11 @@
+package com.adacitin.project;
+
+public class Base_Class {
+	
+	public static void main(String[] args) {
+		
+		
+		
+	}
+
+}

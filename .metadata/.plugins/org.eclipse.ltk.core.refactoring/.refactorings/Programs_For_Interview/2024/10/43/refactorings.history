@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;Recursion.java&apos; to &apos;org.fibonacci_series.Basic_Program.java&apos;&#x0A;- Original project: &apos;Programs_For_Interview&apos;&#x0A;- Destination element: &apos;org.fibonacci_series.Basic_Program.java&apos;&#x0A;- Original element: &apos;org.reverse_string.Recursion.java&apos;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="/src&lt;org.fibonacci_series{Basic_Program.java" element1="/src&lt;org.reverse_string{Recursion.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1729857948710" units="1" version="1.0"/>
+</session>

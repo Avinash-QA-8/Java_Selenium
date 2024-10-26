@@ -1,0 +1,59 @@
+package com.adacitin.project;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.safari.SafariDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class Base_Class {
+	
+	public static  WebDriver driver;
+	
+	public static void browser_Launch (String browser)
+	
+	{
+		
+		if(browser.equalsIgnoreCase("chrome"))
+			
+		{
+		
+		WebDriverManager.chromedriver().setup();
+		
+		 driver = new ChromeDriver();
+		
+		}
+		
+		else if (browser.equalsIgnoreCase("msedge"))
+		
+		{
+		
+		WebDriverManager.edgedriver().setup();
+		
+		 driver = new EdgeDriver();
+		
+		}
+		
+		else if(browser.equalsIgnoreCase("safari"))
+			
+		{
+		
+		WebDriverManager.safaridriver().setup();
+		
+		 driver = new SafariDriver();
+		
+		}
+	}
+	
+	
+	// WebDriver driver = new ChromeDriver();
+	
+	// Here the WebDriver driver = new ChromeDriver(); -> WebDriver driver is common and it is placed as public static WebDrvier driver. 
+	
+	
+	
+	
+
+
+}

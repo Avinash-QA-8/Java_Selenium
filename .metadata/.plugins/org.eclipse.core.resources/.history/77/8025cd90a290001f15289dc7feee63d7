@@ -1,0 +1,140 @@
+package com.adacitin.project;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.safari.SafariDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+//WebDriver driver = new ChromeDriver();
+
+// Here the WebDriver driver = new ChromeDriver(); -> WebDriver driver is common and it is placed as public static WebDrvier driver. 
+
+public class Base_Class {
+	
+	public static  WebDriver driver;
+	
+	public static WebDriver browser_Launch (String browser)  // -> Once the return driver is added make sure that WebDriver is added successfully here !!!
+	
+	{
+		
+		try {
+		
+		
+		if(browser.equalsIgnoreCase("chrome"))
+			
+		{
+		
+		WebDriverManager.chromedriver().setup();
+		
+		 driver = new ChromeDriver();
+		
+		}
+		
+		else if (browser.equalsIgnoreCase("msedge"))
+		
+		{
+		
+		WebDriverManager.edgedriver().setup();
+		
+		 driver = new EdgeDriver();
+		
+		}
+		
+		else if(browser.equalsIgnoreCase("safari"))
+			
+		{
+		
+		WebDriverManager.safaridriver().setup();
+		
+		 driver = new SafariDriver();
+		
+		}
+		
+		} 
+		
+		catch(Exception e)
+		
+		{
+			System.out.println(e.getMessage());
+		}
+		
+		return driver;
+	}
+	
+	
+		public static void url_Launch (String url)
+	
+		{
+			driver.get(url);
+		}
+		
+		public static void maximize_Window()
+		
+		{
+			driver.manage().window().maximize();
+		}
+		
+		public static void input (WebElement element , String data)
+		
+		{
+			element.sendKeys(data);
+		}
+		
+		public static void click_Button (WebElement element)
+		
+		{
+			element.click();
+		}
+		
+		public static void remove (WebElement element)
+		
+		{
+			element.clear();
+		}
+		
+		
+		
+		public static void hold_On() throws InterruptedException
+		
+		{
+			Thread.sleep(2000);
+		}
+		
+		public static void quit()
+		
+		{
+			driver.quit();
+		}
+		
+		public static void close()
+		
+		{
+			
+			driver.close();
+		}
+	
+
+			
+		public static void success_Message()
+		
+		{
+			System.out.println();
+			
+			System.out.println(" Automation Program Executed Successfully !!! ");
+		}
+		
+		
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+}
